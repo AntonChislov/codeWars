@@ -1,5 +1,3 @@
-function solution (roman) {
-  
-}
-
-console.log(solution('MCDLXVI'))
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
