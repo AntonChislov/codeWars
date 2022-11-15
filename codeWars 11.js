@@ -13,22 +13,14 @@ becomes uppercase and each uppercase letter becomes lowercase. For example:
 "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 As usual, your function/method should be pure, i.e. it should not mutate the original string. */
 
-String.prototype.toAlternatingCase = function (str) {
-  // Define your method here :)
-  let arr = str.split(' ')
-  let itog = arr.map(item => {
-    let res = item.split('')
-    for (let i = 0; i < res.length; i++) {
-      if (res[i] === res[i].toUpperCase()) {
-        return res[i].toLowerCase()
+String.prototype.toAlternatingCase = function () {
+  let str = '';
+    for(let i = 0; i< this.length; i++){
+      if (this[i] == this[i].toLowerCase()){ 
+        str += this[i].toUpperCase();
       } else {
-        return res[i].toUpperCase()
+        str += this[i].toLowerCase();
       }
     }
-  })
-  return itog
-}
-
-console.log('hello world'.toAlternatingCase)
-
-// не решено
+    return str;
+  }
